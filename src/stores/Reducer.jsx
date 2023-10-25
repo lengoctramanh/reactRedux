@@ -1,4 +1,4 @@
-import { useReducer } from "react";
+
 import * as TYPES from "./ActionType";
 import { nanoid } from "nanoid";
 
@@ -7,22 +7,24 @@ const initState = {
   todo: [
     {
       id: nanoid,
-      fullname: "A",
-      gender: "male",
+      task: "A",
+      complete:false,
     },
 
-    { id: nanoid, fullname: "B", gender: "female" },
+    { id: nanoid,
+     task: "B", 
+     complete: true },
 
     {
       id: nanoid,
-      fullname: "C",
-      gender: "male",
+      task: "C",
+      complete: false,
     },
 
     {
       id: nanoid,
-      fullname: "D",
-      gender: "female",
+      task: "D",
+     complete: true,
     },
   ],
 };
@@ -49,5 +51,5 @@ const toDoReducer = (state, action) => {
       return state;
   }
 };
-const [] = useReducer(toDoReducer, initState);
+
 export default toDoReducer;
