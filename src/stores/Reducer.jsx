@@ -31,7 +31,7 @@ const initState = {
 // Mảng bự todo chứa nhiều phần tử, tất cả sẽ được gán vào payload của cái action
 
 // Create reducer
-const toDoReducer = (state, action) => {
+const toDoReducer = (state=initState, action) => {
   // Thay vì switch(action.type ) thì giờ dùng destructuring
   const { type } = action;
   switch (type) {
